@@ -1,0 +1,50 @@
+{
+  "name": "interface-utilisateur",
+  "version": "0.0.1",
+  "author": "Ulysse ARNAUD",
+  "description": "",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "start": "cross-env PORT=3000 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@ericblade/quagga2": "^1.4.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "cross-env": "^7.0.3",
+    "prop-types": "^15.8.0",
+    "quagga": "^0.12.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.3",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "web-vitals": "^2.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5",
+    "supertest": "^6.1.6"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

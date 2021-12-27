@@ -1,0 +1,38 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #0d0d0d;
+}
+
+
+.section > aside {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    column-gap: 33.3333vw;
+    height: 100%;
+}
+
+
+.section_camera_scan {
+    display: flex;
+}
+
+
+.section_scanner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+
+.section_prompt {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}

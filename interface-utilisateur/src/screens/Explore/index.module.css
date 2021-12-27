@@ -1,0 +1,38 @@
+.section {
+    position: absolute;
+    inset: 0;
+    top: 100px;
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #1d1d1d;
+    color: #cfcfcf;
+    border-radius: 2.15rem 2.15rem 0 0;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.section > form > fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: .5rem;
+}
+
+.section > form > fieldset > legend {
+    font-size: 125%;
+    padding: .15rem .5rem;
+}
+
+.section > form > fieldset > label {
+    display: flex;
+    column-gap: 1rem;
+    place-items: center;
+}
+
+.section > form > fieldset > button {
+    padding: 0 .75rem;
+}
