@@ -12,5 +12,5 @@ Pour chaque répertoire :
 ```bash
 cd <reportoire>
 npm install
-npm run start
+npm start
 ```
