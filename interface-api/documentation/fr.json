@@ -1,0 +1,94 @@
+{
+  "name": "Stop Carotte",
+  "version": "0.0.1",
+  "author": "Ulysse ARNAUD",
+  "interface-utilisateur": {
+    "description": "Ensemble des fonctionnalités disponibles pour tous les utilisateurs (authentifié ou non).",
+    "voir-tous-les-produits": {
+      "name": "Voir tous les produits",
+      "description": "Retourne un ensemble de produits, enregistrés au préalable, avec un semblant de pagination.",
+      "method": "GET",
+      "url": "http://<endpoint>/api/v0/products",
+      "query": {
+        "pages": {
+          "type": "Number",
+          "description": "Nombre de pages à récupérer.",
+          "default": 10
+        },
+        "start": {
+          "type": "Number",
+          "description": "Page de départ.",
+          "default": 1
+        },
+        "page_size": {
+          "type": "Number",
+          "description": "Nombre de produits par page.",
+          "default": 12
+        }
+      }
+    },
+    "rechercher-via-code-barre": {
+      "name": "Recherche de produits via un code barre",
+      "description": "Retourne les produits correspondant au code barre (EAN uniquement).",
+      "method": "GET",
+      "url": "http://<endpoint>/api/v0/products/search/barcode",
+      "query": {
+        "code": {
+          "type": "String",
+          "description": "Code barre"
+        },
+        "fields": {
+          "type": "String",
+          "description": "Champs à récupérer ; cela peut-être 'product_name' ou 'brands' par exemple."
+        }
+      }
+    },
+    "rechercher-un-produit": {
+      "name": "Recherche de produits via un attribut",
+      "description": "Retourne les produits correspondant aux attributs donnés. Cela peut être 'category' ou 'product_name' par exemple.",
+      "method": "GET",
+      "url": "http://<endpoint>/api/v0/products/search/:type/:value",
+      "params": {
+        "type": {
+          "type": "String",
+          "description": "Champs à rechercher ; cela peut être 'product_name', 'categories' ou 'brands'."
+        },
+        "value": {
+          "type": "String",
+          "description": "Valeur du champs ; la valeur peut être approximative."
+        }
+      }
+    },
+    "voir-toutes-les-categories": {}
+  },
+  "interface-administrateur": {
+    "description": "Ensemble des fonctionnalités disponibles pour les utilisateurs authentifiés.",
+    "recuperer-les-produits": {
+      "name": "Recuperation et enregistrement des produits",
+      "description": "Enregistre les produits de la base de données source (open food facts) dans la base de données de l'API.",
+      "method": "GET",
+      "url": "http://<endpoint>/api/v0/remote/retrieve",
+      "query": {
+        "pages": {
+          "type": "Number",
+          "description": "Nombre de pages à récupérer.",
+          "default": 2
+        },
+        "start": {
+          "type": "Number",
+          "description": "Page de départ.",
+          "default": 1
+        },
+        "page_size": {
+          "type": "Number",
+          "description": "Nombre de produits par page.",
+          "default": 12
+        }
+      }
+    },
+    "ajouter-un-produit": {},
+    "supprimer-un-produit": {},
+    "ajouter-une-categorie": {},
+    "supprimer-une-categorie": {}
+  }
+}
